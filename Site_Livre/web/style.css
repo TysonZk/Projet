@@ -1,0 +1,285 @@
+
+
+/* Haut de page */
+
+header {
+  background-color: #1A237E;
+  color: whitesmoke;
+  border: solid #7B68EE;
+  width: 98%;
+  height: 8em;
+}
+
+header h1{    
+  margin-left: 11em;
+  margin-top: -5em;
+}
+
+.minecraf img{
+  width: 4%;
+  height: 4%;
+  position: relative;
+  margin-left: 34.5em;
+  top: -6.9em;
+}
+
+.minecraf:hover img{
+  transform: rotate(-30deg);
+}
+
+.logo img {
+  width: 9em;
+  height: 7em;
+  float:none;
+  margin-bottom: 2em;
+
+  position: relative;
+  top: 0.5em;
+  left: 2.5em;
+}
+
+.logo img:hover {
+  border: 0.2em solid white;
+  width: 8.6em;
+  height: 6.6em;
+
+}
+
+
+
+
+.inheader a {
+  position: relative;
+  display: inline-block;
+  top: 20px;
+  padding: 7px 15px;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+ 
+.inheader a::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background-color: #1A237E     ;
+  transition: 0.3s ease-in-out;
+  transform: scaleY(1);
+  }
+  
+.inheader a:hover::before {
+  transform: scaleY(0);
+}
+  
+.inheader a::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background-color: #1A237E     ;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+  
+.inheader a:hover::after {
+    transform: scaleX(0); 
+}
+  
+.inheader a span {
+  position: relative;
+  z-index: 3;
+}
+  
+.but {
+  text-decoration: none;
+  background-color: #1A237E  ;
+  border: none;
+  position: absolute;
+  top: 40px;
+  left: 950px;
+}
+
+.bute a{
+  position: relative;
+  display: inline-block;
+  padding: 7px 15px;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.bute {
+  text-decoration: none;
+  background-color: #1A237E  ;
+  border: none;
+  position: absolute;
+  top: 40px;
+  left: 1100px;
+
+}
+    
+body {
+  font-family: Arial, sans-serif;
+  background-color: #303F9F  ;
+}
+
+/* liste*/
+
+aside li{
+  color:antiquewhite;
+  font-size: 20px;
+  list-style:decimal;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px 50px;
+}
+
+aside h2 {
+position: relative;
+margin-left: 50px;
+color: antiquewhite;
+margin-bottom: 30px;
+margin-top: 50px;
+}
+
+/* flex box / livre */
+ 
+.ok{
+  display: flex; 
+  flex-flow: row wrap;
+  width: 90%;
+  margin-left: 3%;
+}
+
+.ok img{
+  position: relative;
+  width: auto;
+  left: 1.2em;
+  top: 0.8em;
+}
+
+.ok p{
+  font-size: 75%;
+  position: relative;
+  top: 1em;
+  color: white;
+  text-align: center;
+}
+
+.ok div{
+  flex: 1 1;
+  margin-top: 7%;
+  margin-left: 3.5%;
+  background-color: #1A237E;  
+  border: dashed #7B68EE;
+}
+
+/* Bas de page*/
+
+footer{
+  background-color: #1A237E;
+  color: whitesmoke;
+  padding: 1%;
+  margin-top: 15%;
+  position: relative;
+  border: solid #7B68EE;
+
+}
+
+.foot p{
+  color: aliceblue;
+  font-size: 150%;
+  font-style: italic;
+  position: relative;
+  bottom: -1em;
+  font-weight: 600;
+  text-align: center;
+  
+}
+
+.foot b{
+  color: red;
+}
+
+.foot1 p{
+
+  color: aliceblue;
+  font-size: 80%;
+  font-style: italic;
+  position: relative;
+  font-weight: 200;
+  text-align: left;
+  top: 1em;
+}
+
+.ok button {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #FAFAFA;
+  padding: 7px 24px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background:#303F9F    ;
+  box-shadow: 0px 4px #fafafa;
+  cursor:pointer;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px ;
+  margin-left: 65px;
+  
+}
+
+.ok button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+
+/* Resposive */
+
+
+
+/* css livres */
+  
+ 
+  .image-container img{
+    width: 20%; 
+    margin-top: -50%;
+    margin-left: 70%;
+    position:absolute;
+    top: 140%;
+    transition: transform 0.3s ease; /* Ajoute une transition fluide */
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.5); /* Agrandit l'image au survol */
+  }
+
+  .livre p{
+      font-size: 135%  ;
+      margin-left: 8%;
+      position:relative;
+      top:5em;
+      color:mediumslateblue;
+  }
+
+    
+
+
+  
+ 
+
+  
