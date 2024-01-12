@@ -1,0 +1,397 @@
+
+
+/* Haut de page */
+
+header {
+  background-color: #1A237E;
+  color: whitesmoke;
+  border: solid #7B68EE;
+  width: 100%;
+  height: 8em;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  
+}
+
+header h1{    
+  align-content: center;
+}
+
+.minecraf {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20%;
+
+}
+ 
+.minecraf img{
+  width: 50%;
+  height: 50%;
+  
+}
+
+.minecraf:hover img{
+  transform: rotate(-30deg);
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1%;
+  margin-right: 15%;
+}
+
+.logo img {
+  height: 6.5em;
+  width: 9em;
+}
+
+.logo img:hover {
+  border: 0.2em solid white;
+  width: 8.6em;
+  height: 6.6em;
+}
+
+.inheader {
+  text-decoration: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+}
+
+.inheader a{
+  position: relative;
+  display: inline-block;
+  padding: 7px 15px;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 20px;
+
+}
+
+ 
+.inheader a::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background-color: #1A237E     ;
+  transition: 0.3s ease-in-out;
+  transform: scaleY(1);
+  }
+  
+.inheader a:hover::before {
+  transform: scaleY(0);
+}
+  
+.inheader a::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background-color: #1A237E     ;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+  
+.inheader a:hover::after {
+    transform: scaleX(0); 
+}
+  
+.inheader a span {
+  position: relative;
+  z-index: 3;
+}
+  
+    
+body {
+  font-family: Arial, sans-serif;
+  background-color: #303F9F  ;
+}
+
+/* liste*/
+
+aside li{
+  color:antiquewhite;
+  font-size: 20px;
+  list-style:decimal;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px 50px;
+}
+
+aside h2 {
+position: relative;
+margin-left: 50px;
+color: antiquewhite;
+margin-bottom: 30px;
+margin-top: 50px;
+}
+
+/* flex box / livre */
+ 
+.ok{
+  display: flex; 
+  flex-flow: row wrap;
+  flex-direction: row; 
+  justify-content: center;
+  padding: 50px;
+  gap: 80px;
+}
+
+.ok img{
+  width: 100%;
+
+}
+
+.ok div{
+  padding: 1%;
+  width: 180px;
+  height: auto;
+}
+
+.ok p{
+  font-size: 75%;
+  color: white;
+  text-align: center;
+}
+
+.ok div{
+  background-color: #1A237E;  
+  border: dashed #7B68EE;
+}
+
+/* Bas de page*/
+
+footer{
+  background-color: #1A237E;
+  color: whitesmoke;
+  padding: 1%;
+  margin-top: 15%;
+  position: relative;
+  border: solid #7B68EE;
+
+}
+
+.foot p{
+  color: aliceblue;
+  font-size: 150%;
+  font-style: italic;
+  position: relative;
+  bottom: -1em;
+  font-weight: 600;
+  text-align: center;
+  
+}
+
+.foot b{
+  color: red;
+}
+
+.foot1 p{
+
+  color: aliceblue;
+  font-size: 80%;
+  font-style: italic;
+  position: relative;
+  font-weight: 200;
+  text-align: left;
+  top: 1em;
+}
+
+.ok button {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #FAFAFA;
+  padding: 7px 24px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background:#303F9F    ;
+  box-shadow: 0px 4px #fafafa;
+  cursor:pointer;
+  display: flex; 
+  flex-flow: row wrap;
+  flex-direction: row; 
+  justify-content: center;
+  margin-left: 28%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+}
+
+.ok button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+
+/* Resposive */
+
+
+
+/* css livres */
+  
+ 
+  .image-container img{
+    width: 20%; 
+    margin-top: -50%;
+    margin-left: 70%;
+    position:absolute;
+    top: 140%;
+    transition: transform 0.3s ease; 
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.5); 
+  }
+
+  .livre p{
+      font-size: 135%  ;
+      margin-left: 8%;
+      position:relative;
+      top:5em;
+      color:whitesmoke;
+  }
+
+    
+
+/* formulaire */
+.fiche h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.fiche ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fiche form {
+    margin: 0 auto;
+    width: 600px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    padding-bottom: 5%;
+    margin-top: 50px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.td{
+  margin-top: 30px;
+  
+}
+
+#demande {
+  margin-top: 10px;
+}
+
+#email {
+  margin-top: 10px;
+}
+
+#commentaire {
+  margin-top: 10px  ;
+}
+
+.fiche label span {
+    display: inline-block;
+    width: 120px;
+    margin-right: 5em ;
+    text-align: right;
+}
+
+.fiche input[type="email"] {
+  margin-right: 1em;
+  border-radius: 10px; 
+
+}
+
+
+.fiche input, textarea {
+    font: 1em sans-serif;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+
+.fiche input:focus, textarea:focus {
+    border-color: #000;
+}
+
+.fiche textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+    margin-top: 10px;
+}
+
+.fiche fieldset {
+    width: 300px;
+    box-sizing: border-box;
+    margin-left: 30%;
+    border: 1px solid black;
+}
+
+.fiche input[type="submit"] {
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: #FAFAFA;
+    padding: 7px 24px;
+    border-radius: 10px;
+    border: 2px solid #FAFAFA;
+    background:#1A237E  ;
+    box-shadow: 0px 4px #fafafa;
+    cursor:pointer;
+    display: flex; 
+    flex-flow: row wrap;
+    flex-direction: row; 
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 12%;
+}
+
+.fiche input[type="submit"]:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+#demande {
+width: 250px;
+border-radius: 10px; 
+margin-bottom: 50px;
+
+}
+.fiche input{
+  margin-bottom: 50px;
+}
+
