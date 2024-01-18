@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>calculatrice</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <div class="imgpos">
+        <img src="/img/cal.jpg" alt="calculatrice" onclick="calculette()" class="img-color" > 
+    </div>
+
+    <div class="container">
+        <form id="conversionForm" action="" method="post">
+            <label for="decimalInput">Entrez un nombre décimal :</label>
+            <input type="text" id="decimalInput" name="decimalInput">
+            <button class="button-40" type="button" onclick="convertirEnBinaire()">Convertir</button>
+            <div class="binaire "id="resultatConversion"></div>
+          </form> 
+    </div>
+    
+    <div class="container2">
+        <form id="conversionForm2" action="" method="post">
+            <label for="binaryInput">Entrez un nombre binaire :</label>
+            <input type="text" id="binaryInput" name="binaryInput">
+            <button class="button-40" type="button" onclick="convertirEnDecimal()">Convertir</button>
+            <div id="resultatConversion2"></div>
+        </form>
+    </div>
+        
+    <script>            
+
+        function calculette() {
+            let choose = prompt("Que voulez vous faire une ( Puissance(1), Multiplication(2), Addition(3), Division(4), Soustraction(5), Modulo(6) ) ?")
+            if(choose == "Multiplication" || choose == "MULTIPLICATION"|| choose == "multiplication" || choose == "M" || choose == "m" || choose == "2") {
+                let chiffre1 = prompt("Votre premier chiffre.")
+                let chiffre2 = prompt("Votre second chiffre.")
+                result = chiffre1 * chiffre2
+                alert("le résultat de la multiplication est " + result)
+            }
+
+            else if (choose == "DIVISION" || choose == "Division" || choose == "division" || choose == "D"  || choose == "d" || choose == "4") {
+                let chiffre1 = prompt("Votre premier chiffre.")
+                let chiffre2 = prompt("Votre second chiffre.")
+                result = chiffre1 / chiffre2
+                alert("le résultat de la divison est " + result)
+            }  
+
+            else if (choose == "ADDITION" || choose == "Addition" || choose == "addition" || choose == "A" || choose == "a" || choose == "3") {
+                let chiffre1 = parseInt( prompt("Votre premier chiffre."))
+                let chiffre2 = parseInt( prompt("Votre second chiffre."))
+                result = chiffre1 + chiffre2
+                alert("le résultat de l'addiction est " + result)
+            }  
+
+            else if (choose == "SOUSTRACTION" || choose == "Soustraction" || choose == "soustraction" || choose == "S" || choose == "s" || choose == "5") {
+                let chiffre1 = parseInt( prompt("Votre premier chiffre."))
+                let chiffre2 = parseInt( prompt("Votre second chiffre."))
+                result = chiffre1 - chiffre2
+                alert("le résultat de la soustraction est " + result)
+            }
+
+            else if (choose == "PUISSANCE" || choose == "Puissance" || choose == "puissance" || choose == "P" || choose == "p" || choose == "1") {
+                let chiffre1 = prompt("Votre premier chiffre.")
+                let chiffre2 = prompt("Votre second chiffre.")
+                result = chiffre1 ** chiffre2
+                alert("le résultat de la puissance est " + result)
+            } 
+            
+            else if (choose == "MODULO" || choose == "Modulo" || choose == "modulo" || choose == "6") {
+                let chiffre1 = prompt("Votre premier chiffre.")
+                let chiffre2 = prompt("Votre second chiffre.")
+                result = chiffre1 % chiffre2
+                alert("le résultat de modulo est " + result)
+            }
+
+            else {
+                alert("Cette méthode de calcul n'existe pas ou peut être mal écrite ( ͡° ͜ʖ ͡°) ")
+            }
+
+            let rechoose = prompt("Voulez vous refaire un calcul ?")
+            if (rechoose == "YES" || rechoose == "Yes" || rechoose == "yes" || rechoose == "Y" || rechoose == "y" || rechoose == "OUI" || rechoose == "Oui" || rechoose == "oui" || rechoose == "O" || rechoose == "o") {
+                calculette()
+            }
+
+            else {
+                alert("A bientot !")
+            }
+        }
+
+        function convertirEnBinaire() {
+            const decimalInput = document.getElementById("decimalInput").value;
+            const resultatDiv = document.getElementById("resultatConversion");
+
+            if (isNaN(decimalInput) || decimalInput < 0 || !Number.isInteger(parseFloat(decimalInput))) {
+                resultatDiv.innerHTML = " Veuillez saisir un nombre entier correct.";
+                return;
+            }
+
+            const binaryNumber = (parseInt(decimalInput)).toString(2);
+            resultatDiv.innerHTML = `Le nombre binaire de ${decimalInput} est : ${binaryNumber}`;
+        }
+
+        function convertirEnDecimal() {
+            const binaryInput = document.getElementById("binaryInput").value;
+            const resultatDiv = document.getElementById("resultatConversion2");
+
+            if (!/^[01]+$/.test(binaryInput)) {
+                resultatDiv.innerHTML = "Entrée invalide. Veuillez saisir un nombre binaire valide.";
+                return;
+            }
+
+            const decimalNumber = parseInt(binaryInput, 2);
+            resultatDiv.innerHTML = `Le nombre décimal de ${binaryInput} est : ${decimalNumber}`;
+        }
+    
+    </script>
+</body>
+
+</html>
