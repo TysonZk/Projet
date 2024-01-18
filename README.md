@@ -1,3 +1,6 @@
+Pour le dossier Bibliotheque_web surtout mais vous pouvez également suivre certaines étapes pour Calculator l'étape Sql est inutile
+For the Bibliotheque_web folder especially but you can also follow certain steps for Calculator the Sql step is unnecessary
+
 Français:  
   Local : Installer Xampp mettez le dossier Bibliothèque Web dans rampe\htdocs, Démarrer apache et MySQL depuis le panel (XAMPP Control panel) lancez MySQL admin depuis le panel, puis importer la base de données g06.sql lancez Apache admin depuis le panel 
   allez sur l'URL de votre dossier donc http://localhost/Bibliotheque_Web/web/
