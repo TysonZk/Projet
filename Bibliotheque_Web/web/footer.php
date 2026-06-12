@@ -3,7 +3,7 @@
         <p id="Copyright"> Bibliotèque Novan <b>©</b>Copyright . </p>
     </div>
     <div class="foot1">
-        <p>By Nolan & Evan</p>
+        <p>By Novan</p>
     </div>
     <?php require "deconnexion_bdd.php"; ?>
 </footer>
